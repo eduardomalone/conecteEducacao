@@ -2,13 +2,22 @@ package com.tecnologia.conecteEducacao.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_disciplina")
 public class Disciplina implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	private String nivel;
 	
 	
 	public Disciplina() {}
@@ -16,7 +25,6 @@ public class Disciplina implements Serializable {
 	public Disciplina(Long id, String name, String nivel) {
 		this.id = id;
 		this.name = name;
-		//this.nivel = nivel;
 	}
 
 	public Long getId() {
@@ -33,14 +41,6 @@ public class Disciplina implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getNivel() {
-		return nivel;
-	}
-
-	public void setNivel(String nivel) {
-		this.nivel = nivel;
 	}
 
 	@Override
