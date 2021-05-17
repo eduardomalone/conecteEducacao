@@ -22,7 +22,7 @@ public class Disciplina implements Serializable {
 	
 	public Disciplina() {}
 	
-	public Disciplina(Long id, String name, String nivel) {
+	public Disciplina(Long id, String name) {
 		this.id = id;
 		this.name = name;
 	}
