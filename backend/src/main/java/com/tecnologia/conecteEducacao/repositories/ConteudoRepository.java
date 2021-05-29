@@ -10,7 +10,11 @@ import com.tecnologia.conecteEducacao.entities.Conteudo;
 
 public interface ConteudoRepository extends JpaRepository<Conteudo, Long>{
 	
-	@Query("SELECT DISTINCT obj FROM Conteudo obj JOIN FETCH obj.disciplinas "
-			+ " ORDER BY obj.titulo ASC")
-	List<Conteudo> findOrdersWithConteudos();
+	
+	List<Conteudo> findAll();
+	
+	Conteudo findByCodconteudo(String codconteudo);
+	
+	List<Conteudo> findByCodconteudoContaining(String codconteudo);
+
 }

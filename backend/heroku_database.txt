@@ -1,0 +1,19 @@
+postgres://
+
+
+usuario: jsfbyznfhrkvcu
+
+:
+
+
+senha: b7ca0c464d1a1b2003dbb048b41e45e6e0cf171f2e20ec79230ba4a20da09a27
+
+@
+
+host: ec2-54-152-185-191.compute-1.amazonaws.com
+
+porta: 5432
+
+/
+
+nome da base: d6ufc86ntigtjm
