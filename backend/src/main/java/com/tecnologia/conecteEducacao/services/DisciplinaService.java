@@ -19,7 +19,7 @@ public class DisciplinaService {
 	
 	@Transactional(readOnly = true)
 	public List<DisciplinaDTO> findAll() {
-		List<Disciplina> list = repository.findAllByOrderByNameAsc();
+		List<Disciplina> list = repository.findAll();
 		return list.stream().map(x -> new DisciplinaDTO(x)).collect(Collectors.toList());
 	}
 }

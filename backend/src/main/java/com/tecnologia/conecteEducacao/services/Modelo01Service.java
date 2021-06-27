@@ -25,12 +25,12 @@ public class Modelo01Service {
 	
 	}
 	
-	@Transactional(readOnly = true)
-	public Modelo01DTO findCodConteudoBloco(String codConteudo, String bloco) {
-		Modelo01 modelo = repository.findByCodconteudoAndBloco(codConteudo, bloco);
-		Modelo01DTO modeloDTO = new Modelo01DTO(modelo);
-		return modeloDTO;
-	}
+	//@Transactional(readOnly = true)
+	//public Modelo01DTO findCodConteudoBloco(String codConteudo, String bloco) {
+	//	Modelo01 modelo = repository.findByCodconteudoAndBloco(codConteudo, bloco);
+	//	Modelo01DTO modeloDTO = new Modelo01DTO(modelo);
+	//	return modeloDTO;
+	//}
 	
 	@Transactional(readOnly = true)
 	public Modelo01DTO findCodConteudo(String codConteudo) {

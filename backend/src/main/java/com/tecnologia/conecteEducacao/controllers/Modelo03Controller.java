@@ -25,11 +25,11 @@ public class Modelo03Controller {
 		List<Modelo03DTO> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
-	
-	@GetMapping("/codConteudoBloco")
-	public ResponseEntity<Modelo03DTO> findCodConteudoBloco(@RequestParam Map<String, String> params){
-		Modelo03DTO modeloDTO = service.findCodConteudoBloco(params.get("codConteudo"), params.get("bloco"));
-		return ResponseEntity.ok().body(modeloDTO);
-	}
+
+//	@GetMapping("/codConteudoBloco")
+//	public ResponseEntity<Modelo03DTO> findCodConteudoBloco(@RequestParam Map<String, String> params){
+//		Modelo03DTO modeloDTO = service.findCodConteudoBloco(params.get("codConteudo"), params.get("bloco"));
+//		return ResponseEntity.ok().body(modeloDTO);
+//	}
 
 }

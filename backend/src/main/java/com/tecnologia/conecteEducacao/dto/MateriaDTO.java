@@ -16,7 +16,6 @@ public class MateriaDTO implements Serializable{
 	public MateriaDTO() {}
 
 	public MateriaDTO(Long indice, Long codnivel, String codmateria, String materia) {
-		super();
 		this.indice = indice;
 		this.codnivel = codnivel;
 		this.codmateria = codmateria;
