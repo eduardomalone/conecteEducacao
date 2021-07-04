@@ -1,9 +1,11 @@
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
 import { fetchMaterias } from '../api';
 import ProductList from './ProductsList';
 import './style.css';
 import { Materia } from './types';
+import 'react-toastify/dist/ReactToastify.css';
 
 var codNivel: number;
 
@@ -20,6 +22,10 @@ function nomeNivel(t: number) {
     }
 }
 
+function Notify() {
+   toast("Carregando"); 
+}
+
 function Orders() {
 
     const search = window.location.search;
@@ -32,10 +38,11 @@ function Orders() {
     }
 
     nomeNivel(codNivel)
-
+    
     const [materias, setMaterias] = useState<Materia[]>([]);
     console.log(materias)
     useEffect(() => {
+        Notify()
         fetchMaterias(codNivel)
             .then(response => setMaterias(response.data))
             .catch(error => console.log(error));
@@ -43,6 +50,12 @@ function Orders() {
 
     return (
         <>
+             <div className="App">
+             <ToastContainer 
+                 autoClose={1000}
+                />
+            </div>
+           
             <div>
                 <header className="orders-steps-container">
                     <div className="">
@@ -52,10 +65,13 @@ function Orders() {
                     </div>
                 </header>
                 <div className="orders-container">
+              
                     <ProductList materias={materias} />
                 </div>
             </div>
+           
         </>
+        
     )
 }
 export default Orders;

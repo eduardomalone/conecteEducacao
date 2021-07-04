@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MontaPage } from './types';
 import { fetchMontaPaginas2 } from '../api';
 import { Button } from '@material-ui/core';
+import { toast, ToastContainer } from 'react-toastify';
 
 
 
@@ -88,6 +89,10 @@ function montaDesc(){
     return codMateria.substring(0,3) +" - "+ info
 }
 
+function Notify() {
+    toast("Carregando"); 
+ }
+
 function Teste() {
 
     if (foox != null) {
@@ -100,6 +105,7 @@ function Teste() {
     const [montaTeste, setMontaTeste] = useState<any>();
 
     useEffect(() => {
+        Notify()
         async function getItems() {
             try {
                 const { data } = await fetchMontaPaginas2(codNivel, codMateria);
@@ -113,6 +119,9 @@ function Teste() {
     }, [])
     return (
         <>
+        <ToastContainer 
+                 autoClose={1000}
+                />
             <header className="orders-steps-container">
                 <div className="">
                     <h1 className="teste-alin">

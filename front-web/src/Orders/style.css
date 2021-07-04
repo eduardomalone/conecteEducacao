@@ -69,7 +69,7 @@
   }
   
   .orders-list-items {
-    width: 70%;
+    width: 60%;
     display: grid;
     grid-template-columns: repeat(auto-fill, 235px);
     grid-gap: 20px 15px;
