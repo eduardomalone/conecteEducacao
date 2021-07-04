@@ -1,12 +1,6 @@
 import { useEffect, useState } from 'react';
 import { MontaPage } from './types';
 import { fetchMontaPaginas2 } from '../api';
-import ReactDOM from 'react-dom';
-import { makeStyles, createStyles } from '@material-ui/core/styles';
-import Pagination from '@material-ui/lab/Pagination';
-import PaginationItem from '@material-ui/lab/PaginationItem';
-import { Link } from 'react-router-dom';
-import React from 'react';
 import { Button } from '@material-ui/core';
 
 
@@ -17,24 +11,12 @@ const foox = params.get('codConteudo');
 const foo2x = params.get('codNivel');
 const nasCoxas = params.get('xx');
 
-const useStyles = makeStyles((theme) =>
-    createStyles({
-        root: {
-            '& > *': {
-                marginTop: theme.spacing(2),
-            },
-        },
-    }),
-);
 
 
 var codMateria: string;
 var codNivel: string;
 let proxPages: string[];
-var qtdPage: number;
 let qtdPaginas: number;
-var showPaginacao: boolean
-
 
 function teteia(u: number, t: string, v: string[]) {
     console.log('saindo da pagina medio', u + ' ' + t)
@@ -67,6 +49,8 @@ function montaTexto(t: MontaPage) {
         }
         const myObjStr = JSON.stringify(tasks);
         console.log(myObjStr);
+        console.log(element);
+
 
         qtdPaginas = t.proximasPaginas.length;
         proxPages = t.proximasPaginas;
@@ -113,7 +97,6 @@ function Teste() {
         codNivel = foo2x
     }
 
-    const classes = useStyles();
     const [montaTeste, setMontaTeste] = useState<any>();
 
     useEffect(() => {

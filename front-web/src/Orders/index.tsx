@@ -1,6 +1,6 @@
-import React from 'react';
+
 import { useEffect, useState } from 'react';
-import { fetchMaterias, fetchProducts } from '../api';
+import { fetchMaterias } from '../api';
 import ProductList from './ProductsList';
 import './style.css';
 import { Materia } from './types';
@@ -9,7 +9,6 @@ var codNivel: number;
 
 function nomeNivel(t: number) {
 
-    var nivel;
     if (t === 3) {
         return 'Ensino Medio'
     }

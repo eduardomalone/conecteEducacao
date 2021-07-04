@@ -1,5 +1,5 @@
 
-import { Materia, Product } from './types';
+import { Materia } from './types';
 
 type Props = {
     materia: Materia;

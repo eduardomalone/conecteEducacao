@@ -1,27 +1,15 @@
-import React, { useState } from 'react';
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { useState } from 'react';
 import { Arvore, ObjSubModuloDTO } from '../Orders/types';
 import { useEffect } from 'react';
 import { fetchArvore } from '../api';
 
-import TreeView from '@material-ui/lab/TreeView';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import TreeItem from '@material-ui/lab/TreeItem';
-import { equal } from 'assert';
-import { Button, ButtonGroup, Card, CardActionArea, CardActions, CardContent, CardMedia } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import ReactDOM from 'react-dom';
-import { textChangeRangeIsUnchanged } from 'typescript';
 
 
 var tetinha: string;
 var codNivel: number;
 var mat: string
-var isArray: any[]
 const search = window.location.search;
 const params = new URLSearchParams(search);
 const foox = params.get('codmateria');
@@ -43,16 +31,7 @@ function teteia(u: number, t: string) {
   return tt
 }
 
-
-
-
 function activateLasers(t: ObjSubModuloDTO[], u: string) {
-
-  const numbers = [1, 2, 3, 4, 5];
-  const listItems = numbers.map((number) =>
-
-    <li>{number}</li>
-  );
 
   //aqui
   const nomeSubModulos = t.map((nomeSub) =>
@@ -110,6 +89,7 @@ export function Medio() {
         }
         console.log('veio222222', data)
         console.log('chegou essa inf22222', mat)
+        console.log('teste', umTeste)
         //.then(montaTexto(montaTeste as MontaPage))
       } catch (error) {
         alert("Ocorreu um erro ao buscar os items");
@@ -139,31 +119,31 @@ export function Medio() {
   const [active, setActive] = useState(arvores[0]);
   */
   return (
-<>
-    <div className="" >
+    <>
+      <div className="" >
 
-      <div className="teste-alin">
-        <h1>{tetinha}</h1>
-      </div>
-      <div className="teste-alin">
+        <div className="teste-alin">
+          <h1>{tetinha}</h1>
+        </div>
+        <div className="teste-alin">
 
 
-        <div className="alinhamento">
-          {arvores && arvores.map(modulo => (
-            
-            <Button id="button" variant="outlined" color="secondary" onClick={() => { activateLasers(modulo.objSubModulo, modulo.modulo) }}>{modulo.modulo}</Button>
+          <div className="alinhamento">
+            {arvores && arvores.map(modulo => (
+
+              <Button id="button" variant="outlined" color="secondary" onClick={() => { activateLasers(modulo.objSubModulo, modulo.modulo) }}>{modulo.modulo}</Button>
             ))}
 
+          </div>
+
+
+          <div className="orders-container" id="ontologia">
+
+          </div>
+
         </div>
-
-
-        <div className="orders-container" id="ontologia">
-
-        </div>
-
       </div>
-    </div>
-            </>
+    </>
   );
 }
 
