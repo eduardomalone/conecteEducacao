@@ -26,6 +26,7 @@ function Notify() {
    toast("Carregando"); 
 }
 
+
 function Orders() {
 
     const search = window.location.search;
@@ -47,7 +48,6 @@ function Orders() {
             .then(response => setMaterias(response.data))
             .catch(error => console.log(error));
     }, [])
-
     return (
         <>
              <div className="App">
@@ -65,7 +65,6 @@ function Orders() {
                     </div>
                 </header>
                 <div className="orders-container">
-              
                     <ProductList materias={materias} />
                 </div>
             </div>

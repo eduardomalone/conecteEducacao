@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Arvore, ObjSubModuloDTO } from '../Orders/types';
 import { useEffect } from 'react';
 import { fetchArvore } from '../api';
 
 import { Button } from '@material-ui/core';
 import ReactDOM from 'react-dom';
+import { toast, ToastContainer } from 'react-toastify';
 
 
 var tetinha: string;
@@ -34,6 +35,7 @@ function teteia(u: number, t: string) {
 function activateLasers(t: ObjSubModuloDTO[], u: string) {
 
   //aqui
+  Notify()
   const nomeSubModulos = t.map((nomeSub) =>
     <div className='order-card-container'>
       <h3 className="order-card-title">
@@ -72,6 +74,14 @@ function activateLasers(t: ObjSubModuloDTO[], u: string) {
     document.getElementById('ontologia')
   );
 }
+
+function Notify() {
+  //toast("Escolha um Card Abaixo"); 
+  toast.info("Escolha um Card Abaixo!", {
+    position: toast.POSITION.BOTTOM_CENTER
+  });
+}
+
 
 
 
@@ -120,6 +130,9 @@ export function Medio() {
   */
   return (
     <>
+     <ToastContainer 
+                 autoClose={1000}
+                />
       <div className="" >
 
         <div className="teste-alin">
