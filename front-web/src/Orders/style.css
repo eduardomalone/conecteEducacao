@@ -1,6 +1,17 @@
 .orders-container {
     background-color: var(--light-color);
   }
+
+  .orders-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .orders-icon {
+    margin-top: 2px;
+    margin-right: 5px;
+  }
   
   .orders-container h3 {
     margin: 0;
@@ -26,7 +37,7 @@
     font-size: 36px;
     line-height: 34px;
     letter-spacing: -0.015em;
-    color: var(--primary-color);
+    color: var(#5ca8da);
     margin-right: 100px;
     text-align: center;
     align-items: center;
@@ -59,7 +70,7 @@
     font-weight: bold;
     line-height: 33px;
     letter-spacing: -0.015em;
-    color: var(--primary-color);
+    color:#5ca8da;
     margin-right: 10px;
   }
   
@@ -77,11 +88,12 @@
   }
 
   .orders-list-items2 {
-    width: 50%;
+    width: 70%;
     display: grid;
     grid-template-columns: repeat(auto-fill, 235px);
     grid-gap: 20px 15px;
     justify-content: space-between;
+    margin-left: 10px;
   }
   
   .order-card-container {
@@ -109,12 +121,12 @@
     font-size: 18px;
     line-height: 25px;
     letter-spacing: -0.015em;
-    color: var(--primary-color);
+    color: var(#02273f);
     text-align: center;
   }
   
   .order-card-container.selected .order-card-title {
-    color: #008E5B;
+    color: #5ca8da;
   }
   
   .order-card-image {
@@ -147,7 +159,7 @@
     font-size: 16px;
     line-height: 22px;
     letter-spacing: -0.015em;
-    color: var(--secondary-color);
+    color:#5ca8da;
   }
   
   .order-card-description p {
@@ -156,7 +168,7 @@
     line-height: 19px;
     letter-spacing: -0.015em;
   
-    color: var(--secondary-color);
+    color:#5ca8da;
   }
   
   .order-location-container {
@@ -218,7 +230,7 @@
     line-height: 25px;
     text-align: center;
     letter-spacing: -0.015em;
-    color: var(--secondary-color);
+    color: #5ca8da;
   }
   
   .order-summary-container {
@@ -284,13 +296,13 @@
     line-height: 25px;
     text-align: center;
     letter-spacing: -0.015em;
-    color: var(--primary-color);
+    color: #5ca8da;
     border: 0;
     cursor: pointer;
   }
   
   .order-summary-make-order:focus {
-    outline: none;
+    outline: #02273f;
   }
   
   .order-summary-make-order:hover {
@@ -332,10 +344,6 @@
       margin-top: 15px;
       width: 100%;
     }
-
-    
-
-
 
     .button {
       display: block;

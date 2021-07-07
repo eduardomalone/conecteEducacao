@@ -23,7 +23,9 @@ function nomeNivel(t: number) {
 }
 
 function Notify() {
-   toast("Carregando"); 
+    toast.info("Carregando...!", {
+        position: toast.POSITION.TOP_CENTER
+      });
 }
 
 
@@ -50,6 +52,7 @@ function Orders() {
     }, [])
     return (
         <>
+        
              <div className="App">
              <ToastContainer 
                  autoClose={1000}

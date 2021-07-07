@@ -1,5 +1,5 @@
 import './style.css';
-import {ReactComponent as Logo } from './school.svg';
+import {ReactComponent as Logo } from './conecta_vai_essa.svg';
 import { Link } from 'react-router-dom';
 
 function Navbar(){

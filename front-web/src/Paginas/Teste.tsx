@@ -90,7 +90,9 @@ function montaDesc(){
 }
 
 function Notify() {
-    toast("Carregando"); 
+    toast.info("Carregando...!", {
+        position: toast.POSITION.TOP_CENTER
+      });
  }
 
 function Teste() {
@@ -130,7 +132,7 @@ function Teste() {
                 </div>
             </header>
             <div className="teste-alin">
-                <Button id="button" variant="outlined" color="secondary" onClick={goBack}>{montaDesc()}</Button> 
+                <Button id="button" variant="outlined" color="primary" onClick={goBack}>{montaDesc()}</Button> 
             </div>
             <div className="order-location-container">
                 <div className="order-location-content">

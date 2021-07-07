@@ -27,7 +27,7 @@
     font-size: 36px;
     line-height: 34px;
     letter-spacing: -0.015em;
-    color: var(--primary-color);
+    color: var(#5ca8da);
     margin-right: 100px;
     text-align: center;
     align-items: center;
@@ -51,7 +51,7 @@
     font-size: 18px;
     line-height: 25px;
     letter-spacing: -0.015em;
-    color: var(--secondary-color);
+    color: var(#5ca8da);
   }
   
   .steps-items .steps-number {
@@ -60,7 +60,7 @@
     font-weight: bold;
     line-height: 33px;
     letter-spacing: -0.015em;
-    color: var(--primary-color);
+    color: var(#5ca8da);
     margin-right: 10px;
   }
   
@@ -109,7 +109,7 @@
     font-size: 18px;
     line-height: 25px;
     letter-spacing: -0.015em;
-    color: var(--primary-color);
+    color: var(#5ca8da);
     text-align: center;
   }
   
@@ -147,7 +147,7 @@
     font-size: 16px;
     line-height: 22px;
     letter-spacing: -0.015em;
-    color: var(--secondary-color);
+    color: var(#042c47);
   }
   
   .order-card-description p {
@@ -156,7 +156,7 @@
     line-height: 19px;
     letter-spacing: -0.015em;
   
-    color: var(--secondary-color);
+    color: var(#5ca8da);
   }
   
   .order-location-container {
@@ -218,7 +218,7 @@
     line-height: 25px;
     text-align: center;
     letter-spacing: -0.015em;
-    color: var(--secondary-color);
+    color: var(#5ca8da);
   }
   
   .order-summary-container {

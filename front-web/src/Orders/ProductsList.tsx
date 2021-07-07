@@ -9,7 +9,7 @@ function ProductList({ materias, }: Props) {
     return (
         <>
             <div className="orders-list-container" >
-                <div className="orders-list-items">
+                <div className="orders-list-items2">
                     {materias.map(materia => (
                         <ProductsCard key={materia.indice} materia={materia} />
                     ))}

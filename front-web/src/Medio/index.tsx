@@ -6,6 +6,8 @@ import { fetchArvore } from '../api';
 import { Button } from '@material-ui/core';
 import ReactDOM from 'react-dom';
 import { toast, ToastContainer } from 'react-toastify';
+import Footer from '../Footer';
+import { ImLibreoffice } from 'react-icons/im';
 
 
 var tetinha: string;
@@ -41,13 +43,24 @@ function activateLasers(t: ObjSubModuloDTO[], u: string) {
       <h3 className="order-card-title">
         {nomeSub.submodulo}
       </h3>
+
+
       <div className="order-card-description">
         {nomeSub.subsubModulo && nomeSub.subsubModulo.map((subsub) =>
           <p>
-            <a href={teteia(codNivel, subsub.codsubsubModulo)} >{subsub.subSubmodulo}</a>
+            <div className="orders-flex">
+
+              <div className="orders-icon">
+                <ImLibreoffice />
+              </div>
+              <div >
+                <a href={teteia(codNivel, subsub.codsubsubModulo)} >{subsub.subSubmodulo}</a>
+              </div>
+            </div>
           </p>
         )}
       </div>
+
     </div>
   );
 
@@ -82,9 +95,6 @@ function Notify() {
   });
 }
 
-
-
-
 var umTeste: Arvore[]
 export function Medio() {
 
@@ -111,49 +121,22 @@ export function Medio() {
 
     [])
 
-
-
-  /*const [arvores, setArvores] = useState<Arvore[]>([]);
-  console.log('arvoresssss',arvores)
-  useEffect(() => {
-    console.log('inicio componente monta arvores');
-    
-    //fetchArvore(2, 'MAT')
-    fetchArvore(codNivel, mat)
-    .then(response => setArvores(response.data))
-    .catch(error => console.log(error));
-    console.log('montaArvore: ', arvores)
-    //buscaModulo(arvores);
-  },
-  [])
-  const [active, setActive] = useState(arvores[0]);
-  */
   return (
     <>
-     <ToastContainer 
-                 autoClose={1000}
-                />
-      <div className="" >
+      <ToastContainer
+        autoClose={1000}
+      />
+      <div className="teste-alin">
+        <h1>{tetinha}</h1>
+      </div>
+      <div className="teste-alin">
 
-        <div className="teste-alin">
-          <h1>{tetinha}</h1>
+        <div className="alinhamento">
+          {arvores && arvores.map(modulo => (
+            <Button id="button" variant="outlined" color="primary" onClick={() => { activateLasers(modulo.objSubModulo, modulo.modulo) }}>{modulo.modulo}</Button>
+          ))}
         </div>
-        <div className="teste-alin">
-
-
-          <div className="alinhamento">
-            {arvores && arvores.map(modulo => (
-
-              <Button id="button" variant="outlined" color="secondary" onClick={() => { activateLasers(modulo.objSubModulo, modulo.modulo) }}>{modulo.modulo}</Button>
-            ))}
-
-          </div>
-
-
-          <div className="orders-container" id="ontologia">
-
-          </div>
-
+        <div className="orders-container" id="ontologia">
         </div>
       </div>
     </>

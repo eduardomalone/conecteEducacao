@@ -1,5 +1,5 @@
 import './style.css';
-import { ReactComponent as MainImage } from './graduacao4.svg';
+import { ReactComponent as MainImage } from './conecte_educacao.svg';
 import Footer from '../Footer';
 import { Link } from 'react-router-dom';
 
@@ -30,7 +30,7 @@ function Home() {
                     
                 </div>
             </div>
-            <Footer />
+            
         </>
     )
 }
