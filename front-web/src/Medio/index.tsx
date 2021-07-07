@@ -64,7 +64,6 @@ function activateLasers(t: ObjSubModuloDTO[], u: string) {
     </div>
   );
 
-  // ReactDOM.render(element, document.getElementById('ontologia'));
   ReactDOM.render(
     <div className="orders-container">
       <header className="orders-steps-container">
@@ -77,7 +76,7 @@ function activateLasers(t: ObjSubModuloDTO[], u: string) {
       </header>
 
       <div className="orders-list-container">
-        <div className="orders-list-items">
+        <div className="orders-list-items2">
           {nomeSubModulos},
 
         </div>

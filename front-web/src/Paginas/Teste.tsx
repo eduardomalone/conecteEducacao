@@ -90,7 +90,7 @@ function montaDesc(){
 }
 
 function Notify() {
-    toast.info("Carregando...!", {
+    toast.info("Carregando...", {
         position: toast.POSITION.TOP_CENTER
       });
  }
