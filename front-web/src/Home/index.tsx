@@ -1,5 +1,5 @@
 import './style.css';
-import { ReactComponent as MainImage } from './conecte_educacao.svg';
+import { ReactComponent as MainImage } from './conecte_educacao_3_.svg';
 import Footer from '../Footer';
 import { Link } from 'react-router-dom';
 
