@@ -146,10 +146,10 @@ public class MontaBlocos {
 			  }
 		    break;
 		  case "modelo02":
-			  //List<Modelo02> modeloConteudo2 = repositoryModelo02.findByCodconteudoAndBloco(codConteudo, bloco); 
-			  Modelo02 modeloConteudo2 = repositoryModelo02.findByCodconteudoAndBloco(codConteudo, bloco);
+			  List<Modelo02> modeloConteudo2 = repositoryModelo02.findByCodconteudoAndBloco(codConteudo, bloco); 
+			  //Modelo02 modeloConteudo2 = repositoryModelo02.findByCodconteudoAndBloco(codConteudo, bloco);
 			  if(modeloConteudo2 != null) {
-				  montaPaginaDTO.getListaBlocoConteudo().add(modeloConteudo2.getImagem());
+				  montaPaginaDTO.getListaBlocoConteudo().add(modeloConteudo2.get(0).getImagem());
 				  montaPaginaDTO.getBlocos().add(modeloConteudo2);
 			  }
 		    break;
@@ -171,10 +171,10 @@ public class MontaBlocos {
 			  }
 		    break;
 		  case "modelo05":
-			  //List<Modelo05> modeloConteudo5 = repositoryModelo05.findByCodconteudoAndBloco(codConteudo, bloco);
-			  Modelo05 modeloConteudo5 = repositoryModelo05.findByCodconteudoAndBloco(codConteudo, bloco);
+			  List<Modelo05> modeloConteudo5 = repositoryModelo05.findByCodconteudoAndBloco(codConteudo, bloco);
+			  //Modelo05 modeloConteudo5 = repositoryModelo05.findByCodconteudoAndBloco(codConteudo, bloco);
 			  if(modeloConteudo5 != null) {
-			  montaPaginaDTO.getListaBlocoConteudo().add(modeloConteudo5.getSom());
+			  montaPaginaDTO.getListaBlocoConteudo().add(modeloConteudo5.get(0).getSom());
 			  montaPaginaDTO.getBlocos().add(modeloConteudo5);
 			  }
 			  break;
@@ -212,10 +212,10 @@ public class MontaBlocos {
 			  }
 			    break;
 		  case "modelo10":
-			// List<Modelo10> modeloConteudo10 = repositoryModelo10.findByCodconteudoAndBloco(codConteudo, bloco);
-			  Modelo10 modeloConteudo10 = repositoryModelo10.findByCodconteudoAndBloco(codConteudo, bloco);
+			List<Modelo10> modeloConteudo10 = repositoryModelo10.findByCodconteudoAndBloco(codConteudo, bloco);
+			  //Modelo10 modeloConteudo10 = repositoryModelo10.findByCodconteudoAndBloco(codConteudo, bloco);
 			  if(modeloConteudo10 != null) {
-				  montaPaginaDTO.getListaBlocoConteudo().add(modeloConteudo10.getTabela());
+				  montaPaginaDTO.getListaBlocoConteudo().add(modeloConteudo10.get(0).getTabela());
 				  montaPaginaDTO.getBlocos().add(modeloConteudo10);
 				  
 			  }

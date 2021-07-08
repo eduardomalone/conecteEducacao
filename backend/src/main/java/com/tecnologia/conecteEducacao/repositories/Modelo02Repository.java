@@ -12,8 +12,8 @@ public interface Modelo02Repository extends JpaRepository<Modelo02, Long>{
 	
 	List<Modelo02> findAll();
 	
-	Modelo02 findByCodconteudoAndBloco(String codConteudo, String bloco);
+	//Modelo02 findByCodconteudoAndBloco(String codConteudo, String bloco);
 	
-	//List<Modelo02> findByCodconteudoAndBloco(String codConteudo, String bloco);
+	List<Modelo02> findByCodconteudoAndBloco(String codConteudo, String bloco);
 
 }

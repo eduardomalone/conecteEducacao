@@ -12,7 +12,7 @@ public interface Modelo10Repository extends JpaRepository<Modelo10, Long>{
 	
 	List<Modelo10> findAll();
 	
-	//List<Modelo10> findByCodconteudoAndBloco(String codConteudo, String bloco);
-	Modelo10 findByCodconteudoAndBloco(String codConteudo, String bloco);
+	List<Modelo10> findByCodconteudoAndBloco(String codConteudo, String bloco);
+	//Modelo10 findByCodconteudoAndBloco(String codConteudo, String bloco);
 
 }
