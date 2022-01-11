@@ -39,7 +39,7 @@ function Home() {
                     </div>
                     <div className="home-actions2">
                         <a href={homeEdInfantil} target="_blank" rel="noreferrer noopener" className="home-btn-order">
-                            ED. INFANTIL
+                            INFANTIL
                         </a>
                     </div>
                     
